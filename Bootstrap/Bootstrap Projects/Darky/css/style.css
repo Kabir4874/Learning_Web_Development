@@ -3,3 +3,31 @@
 body {
   font-family: "Manrope", sans-serif;
 }
+.btn{
+  border-radius: 0;
+  padding: 10px 20px;
+}
+.bg-2{
+  background-color: #121212;
+}
+.border-custom{
+  border: 1px solid #444;
+  transition: all .4s ease;
+}
+.border-custom:hover{
+  border-color: var(--bs-blue);
+}
+.icon{
+  width: 60px;
+  height: 60px;
+  background-color: #555;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  transition: all .4s ease;
+}
+.border-custom:hover .icon{
+  background-color: var(--bs-blue);
+}
