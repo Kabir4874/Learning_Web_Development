@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="body">
+    <img src="https://unsplash.com/photos/boIJluEJEPM" alt="" width="100px" height="100px">
+    <p id="data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quibusdam soluta, odit ipsum explicabo voluptatibus! Ipsum quasi nostrum sed dolor natus, quaerat aspernatur dicta? Autem laborum laboriosam a debitis, odio perferendis distinctio itaque amet ut animi? Laborum aut soluta, hic perferendis magnam harum consectetur quaerat ad? Ut earum sit, debitis enim excepturi eligendi esse, vitae nam perferendis incidunt nihil, aliquam facere. Minus dolore provident itaque libero. Debitis, nisi nemo tempora repellat ipsum voluptas totam impedit dolores. Vero beatae ipsa soluta expedita amet praesentium distinctio, sed dignissimos hic ut exercitationem culpa excepturi assumenda aperiam molestiae pariatur aut accusantium mollitia repellendus, ipsam aliquam facere aliquid placeat quasi? Reprehenderit, sapiente inventore. Illum, pariatur? Temporibus saepe odit laudantium necessitatibus accusamus, eaque doloremque suscipit? Rerum dolore id deserunt quas neque dolores sed ex a, excepturi dolorum illum nobis aliquam minus aut. Rerum quia alias ipsam. Tempore facilis perferendis repudiandae corporis mollitia reprehenderit exercitationem dicta. Necessitatibus animi magni reiciendis amet, ipsum ratione laboriosam, minima ea vitae itaque adipisci consectetur dolorum, labore totam. Assumenda, animi. Itaque laboriosam alias hic atque quam omnis quos possimus delectus nulla magni! Quasi rerum aperiam fugit, voluptatibus placeat in nihil magnam dolorum beatae aspernatur ipsam nostrum modi, magni molestiae. Harum, porro temporibus. Excepturi, asperiores officiis deleniti veniam tempore sint nulla dolores quia vel aliquam culpa accusantium. Assumenda eos quaerat voluptas, minima tempora atque perspiciatis corporis magni? Recusandae officiis saepe esse molestiae iste nemo rem eveniet blanditiis facilis? Consequuntur voluptas nihil dolores laborum perferendis expedita! Quis illo, maxime voluptatibus laudantium excepturi ut perferendis dicta molestias blanditiis, asperiores, sequi consectetur? Placeat consequuntur expedita reprehenderit ea cum impedit cumque nulla nesciunt ipsam perspiciatis aliquam qui quod praesentium, provident ratione rem neque cupiditate totam. Commodi, modi. Nisi excepturi, velit magnam sit quam tenetur. Impedit corporis perspiciatis voluptatem cum libero, architecto quidem animi reprehenderit, exercitationem non molestiae?</p>
+    <button onclick="printPage()">Print Content</button>
+</body>
+<script>
+    function printPage(){
+        var body= document.getElementById('body').innerHTML;
+        var data = document.getElementById('data').innerHTML;
+        document.getElementById('body').innerHTML= data;
+        window.print();
+        document.getElementById('body').innerHTML= body;
+    }
+</script>
+</html>

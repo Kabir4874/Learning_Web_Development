@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+.container{
+    width: 50%;
+    margin: 20rem auto;
+}
+.btn{
+    padding: 2rem 3rem;
+    font-size: 30px;
+    margin-top: 4rem;
+    margin-right: 2rem;
+}
