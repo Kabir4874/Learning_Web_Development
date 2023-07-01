@@ -3,21 +3,21 @@
 body {
   font-family: "Manrope", sans-serif;
 }
-.btn{
+.btn {
   border-radius: 0;
   padding: 10px 20px;
 }
-.bg-2{
+.bg-2 {
   background-color: #121212;
 }
-.border-custom{
+.border-custom {
   border: 1px solid #444;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
-.border-custom:hover{
+.border-custom:hover {
   border-color: var(--bs-blue);
 }
-.icon{
+.icon {
   width: 60px;
   height: 60px;
   background-color: #555;
@@ -26,8 +26,54 @@ body {
   text-align: center;
   font-size: 32px;
   color: white;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
-.border-custom:hover .icon{
+.border-custom:hover .icon {
   background-color: var(--bs-blue);
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+}
+.project{
+  overflow: hidden;
+  position: relative;
+}
+.project .overlay{
+  padding: 32px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all .4s ease-in-out;
+  opacity: 0;
+  transform: translateY(60px);
+}
+.project:hover .overlay{
+  opacity: 1;
+  transform: translateY(0);
+}
+.overlay p{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.review img{
+  width: 90px;
+  border-radius: 100px;
+}
+.team-member .divider{
+  background-color: #555;
+  height: 1px;
+}
+.team-member .links .icon{
+  width: 40px;
+  height: 40px;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  background-color: transparent;
+  border: 1px solid #555;
+}
+.team-member .links .icon:hover{
+  background-color: var(--bs-blue);
+  border-color: var(--bs-blue);
 }
