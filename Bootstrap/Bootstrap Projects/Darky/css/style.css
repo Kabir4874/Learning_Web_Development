@@ -77,3 +77,21 @@ body {
   background-color: var(--bs-blue);
   border-color: var(--bs-blue);
 }
+
+#contact .form-control{
+  background-color: transparent;
+  border: 1px solid #555;
+  border-radius: 0;
+  padding: 10px;
+  color: white;
+}
+#follow{
+  position: relative;
+}
+.follow-btn{
+  position: absolute;
+  z-index: 11;
+  text-align: center;
+  top: 50%;
+  transform:translateY(-50%);
+}
