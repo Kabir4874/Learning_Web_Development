@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap");
 
-html{
+html {
   overflow-x: hidden;
 }
 body {
@@ -40,36 +40,36 @@ body {
 .swiper-pagination-bullet {
   background-color: white;
 }
-.project{
+.project {
   overflow: hidden;
   position: relative;
 }
-.project .overlay{
+.project .overlay {
   padding: 32px;
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   opacity: 0;
   transform: translateY(60px);
 }
-.project:hover .overlay{
+.project:hover .overlay {
   opacity: 1;
   transform: translateY(0);
 }
-.overlay p{
+.overlay p {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.review img{
+.review img {
   width: 90px;
   border-radius: 100px;
 }
-.team-member .divider{
+.team-member .divider {
   background-color: #555;
   height: 1px;
 }
-.team-member .links .icon{
+.team-member .links .icon {
   width: 40px;
   height: 40px;
   color: white;
@@ -78,42 +78,42 @@ body {
   background-color: transparent;
   border: 1px solid #555;
 }
-.team-member .links .icon:hover{
+.team-member .links .icon:hover {
   background-color: var(--bs-blue);
   border-color: var(--bs-blue);
 }
 
-#contact .form-control{
+#contact .form-control {
   background-color: transparent;
   border: 1px solid #555;
   border-radius: 0;
   padding: 10px;
   color: white;
 }
-#follow{
+#follow {
   position: relative;
 }
-.follow-btn{
+.follow-btn {
   position: absolute;
   z-index: 11;
   text-align: center;
   top: 50%;
-  transform:translateY(-50%);
+  transform: translateY(-50%);
 }
 
-footer ul li a{
+footer ul li a {
   color: var(--bs-body);
   margin-bottom: 5px;
 }
 
-.scroll-to-top{
+.scroll-to-top {
   text-decoration: none;
   border-radius: 100px;
   position: fixed;
   bottom: 40px;
   right: 40px;
 }
-.scroll-to-top:hover{
-    color: white;
-    background-color: var(--bs-blue);
+.scroll-to-top:hover {
+  color: white;
+  background-color: var(--bs-blue);
 }
