@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap");
 
+html{
+  overflow-x: hidden;
+}
 body {
   font-family: "Manrope", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 .btn {
   border-radius: 0;
@@ -94,4 +99,21 @@ body {
   text-align: center;
   top: 50%;
   transform:translateY(-50%);
+}
+
+footer ul li a{
+  color: var(--bs-body);
+  margin-bottom: 5px;
+}
+
+.scroll-to-top{
+  text-decoration: none;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+.scroll-to-top:hover{
+    color: white;
+    background-color: var(--bs-blue);
 }

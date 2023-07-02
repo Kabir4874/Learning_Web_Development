@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body id="top">
     <!-- navbar  -->
 
     <nav
@@ -280,7 +280,7 @@
 
     <section id="team" class="py-5">
         <div class="container">
-          <div class="row align-items-center mb-3">
+          <div class="row align-items-center">
             <div class="col-md-8">
               <h6 class="text-primary">TEAM</h6>
               <h2 class="h3">Our Crew Members</h2>
@@ -292,8 +292,8 @@
             </div>
           </div>
           
-          <div class="row">
-            <div class="col-lg-3 col-sm-6">
+          <div class="row gap-3 gap-sm-0">
+            <div class="col-lg-3 col-sm-6 mb-sm-3 mb-md-3">
                 <div class="team-member border-custom py-3">
                     <div class="team-head p-3 text-center">
                         <img src="img/team-01.jpg" class="img-fluid mb-3" alt="">
@@ -381,7 +381,7 @@
         </div>
         
           <div class="row">
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-3 col-sm-6 mb-3">
               <div class="blog-post p-4 border-custom">
                 <span class="badge bg-primary rounded-0">12-07-2023</span>
                 <h5 class="my-3">Design a website using Bootstrap</h5>
@@ -389,7 +389,7 @@
                 <a href="#">Read More</a>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-3 col-sm-6 mb-3">
               <div class="blog-post p-4 border-custom">
                 <span class="badge bg-primary rounded-0">12-07-2023</span>
                 <h5 class="my-3">Design a website using Bootstrap</h5>
@@ -397,7 +397,7 @@
                 <a href="#">Read More</a>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-3 col-sm-6 mb-3">
               <div class="blog-post p-4 border-custom">
                 <span class="badge bg-primary rounded-0">12-07-2023</span>
                 <h5 class="my-3">Design a website using Bootstrap</h5>
@@ -456,7 +456,7 @@
               <div class="icon"><i class="las la-map"></i></div>
               <div class="ms-3">
                 <h5>Address</h5>
-                <p class="mb-0">36 Station Road, Stoke Debernon, KT11 3BN</p>
+                <p class="mb-0">36 Station Road</p>
               </div>
             </div>
            </div>
@@ -511,8 +511,8 @@
 
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
+        <div class="row g-0">
+          <div class="col-md-6 d-grid">
             <div class="p-4 border-custom">
               <h4><a href="#">Darky.</a></h4>
               <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis culpa necessitatibus saepe, iusto ipsam soluta?</p>
@@ -521,7 +521,7 @@
           <div class="col-md-3">
             <div class="p-4 border-custom">
               <h5>Links</h5>
-              <ul>
+              <ul class="list-unstyled">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Work</a></li>
@@ -532,7 +532,7 @@
           <div class="col-md-3">
             <div class="p-4 border-custom">
               <h5>Follow Us</h5>
-              <ul>
+              <ul class="list-unstyled">
                 <li><a href="#">GitHub</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Linkedin</a></li>
@@ -540,10 +540,19 @@
               
             </div>
           </div>
+
+
+          <div class="col-12 border-custom text-center py-3">
+            <p class="mb-0">Designed By Kabir Ahmed Ridoy</p>
+          </div>
+
         </div>
       </div>
     </footer>
 
+    <!-- Scroll to top  -->
+
+    <a href="#top" class="icon scroll-to-top"><i class="las la-arrow-up"></i></a>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
