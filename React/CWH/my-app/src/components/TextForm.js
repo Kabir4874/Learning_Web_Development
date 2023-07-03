@@ -35,7 +35,7 @@ export default function TextForm(props) {
             onChange={handleOnChange}
             id="myBox"
             rows="12"
-            style={{backgroundColor:props.mode==='light'? 'white':'gray'}}
+            style={{backgroundColor:props.mode==='light'? 'white':'gray',color:props.mode==='light'? 'black':'white'}}
           ></textarea>
         </div>
         <button className="btn btn-primary" onClick={handleUpClick}>
@@ -55,7 +55,7 @@ export default function TextForm(props) {
         </p>
         <p>{0.008 * text.split(" ").length} Minutes</p>
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text.length>0? text: "Enter something to preview it there"}</p>
       </div>
     </>
   );
