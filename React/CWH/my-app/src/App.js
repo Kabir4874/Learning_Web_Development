@@ -12,9 +12,11 @@ function App() {
     if (mode === "light") {
       SetMode("dark");
       document.body.style.backgroundColor = "gray";
+      showAlert("Dark mode has been enabled", "success");
     } else {
       SetMode("light");
       document.body.style.backgroundColor = "white";
+      showAlert("Light mode has been enabled", "success");
     }
   };
 
@@ -25,6 +27,9 @@ function App() {
       msg: message,
       type: type,
     });
+    setTimeout(() => {
+      setalert(null);
+    }, 3000);
   };
 
   return (
