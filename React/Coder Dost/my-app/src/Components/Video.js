@@ -1,12 +1,12 @@
 import React from "react";
 import "./Video.css";
 
-function Video({ title, channel, views, verified, time }) {
+function Video({ title, channel, views, verified, time, id }) {
   return (
     <>
       <div className="container">
         <div className="pic">
-          <img src="https://source.unsplash.com/500x300/?portrait" alt="" />
+          <img src={`https://picsum.photos/id/${id}/400/300`} alt="" />
         </div>
         <div className="title">{title}</div>
         <div className="channel">
