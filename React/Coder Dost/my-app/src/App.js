@@ -7,7 +7,8 @@ function App() {
 
       <div>Hello</div>
 
-      <Video/>
+      <Video title="React Js tutorial" bgColor="red"/>
+      <Video title="Node Js tutorial" bgColor="green"/>
 
     </>
   );
