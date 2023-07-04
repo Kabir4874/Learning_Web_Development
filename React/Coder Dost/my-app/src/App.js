@@ -1,4 +1,5 @@
 import "./App.css";
+import PlayButton from "./Components/PlayButton";
 import Video from "./Components/Video";
 import videos from "./Data/Data";
 
@@ -18,6 +19,10 @@ function App() {
             verified={video.verified}
           />
         ))}
+        <div style={{clear: "both"}}>
+          <PlayButton message={"Play Message"} >Play</PlayButton>
+          <PlayButton message={"Pause Message"}>Pause</PlayButton>
+        </div>
       </div>
     </>
   );
