@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./AddVideo.css";
+import useVideoDispatch from "../Hooks/VideoDispatch";
 
 const initialState = {
   time: "5 day Ago",
@@ -9,8 +10,12 @@ const initialState = {
   views: "",
 };
 
-function AddVideo({ dispatch, editableVideo }) {
+function AddVideo({ editableVideo }) {
   const [video, Setvideo] = useState(initialState);
+  const dispatch = useVideoDispatch();
+
+  const inputRef = useRef(null);
+
   function handleSubmit(e) {
     e.preventDefault();
     if (editableVideo) {
@@ -29,12 +34,14 @@ function AddVideo({ dispatch, editableVideo }) {
     if (editableVideo) {
       Setvideo(editableVideo);
     }
+    inputRef.current.value = "demo";
   }, [editableVideo]);
 
   return (
     <div>
       <form>
         <input
+          ref={inputRef}
           type="text"
           name="title"
           onChange={handleChange}
