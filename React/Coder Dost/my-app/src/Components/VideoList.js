@@ -2,7 +2,7 @@ import React from "react";
 
 import Video from "./Video";
 import PlayButton from "./PlayButton";
-function VideoList({ videos, deleteVideo , editVideo}) {
+function VideoList({ videos, deleteVideo, editVideo }) {
   return (
     <div>
       {videos.map((video) => (
