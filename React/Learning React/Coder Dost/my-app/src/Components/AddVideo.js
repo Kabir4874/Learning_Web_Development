@@ -56,7 +56,7 @@ function AddVideo({ editableVideo }) {
           value={video.views}
         />
         <button onClick={handleSubmit}>
-          {editableVideo ? "Edit" : "Add"} Video 
+          {editableVideo ? "Edit" : "Add"} Video
         </button>
       </form>
     </div>
