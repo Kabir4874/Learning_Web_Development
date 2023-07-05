@@ -1,7 +1,7 @@
 import React from "react";
 import "./Video.css";
 
-function Video({ title, channel, views, verified, time, id }) {
+function Video({ title, channel, views, verified, time, id, children }) {
   return (
     <>
       <div className="container">
@@ -17,6 +17,7 @@ function Video({ title, channel, views, verified, time, id }) {
           {views} views <span>.</span>
           {time}
         </div>
+        <div>{children}</div>
       </div>
     </>
   );
