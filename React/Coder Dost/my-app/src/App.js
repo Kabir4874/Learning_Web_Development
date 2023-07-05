@@ -1,8 +1,10 @@
-import { useReducer, useState } from "react";
+import { useContext, useReducer, useState } from "react";
 import "./App.css";
 import videoDB from "./Data/Data";
 import AddVideo from "./Components/AddVideo";
 import VideoList from "./Components/VideoList";
+import ThemeContext from "./Context/ThemeContext";
+import videosContext from "./Context/VideoContext";
 
 function App() {
   const [editableVideo, SetEditableVideo] = useState(null);
@@ -26,20 +28,26 @@ function App() {
 
   const [videos, dispatch] = useReducer(videoReducer, videoDB);
 
+  const themeContext = useContext(ThemeContext);
+  console.log(themeContext);
+
   function editVideo(id) {
     SetEditableVideo(videos.find((video) => video.id === id));
   }
 
   return (
     <>
-      <div className="App">
-        <AddVideo dispatch={dispatch} editableVideo={editableVideo}></AddVideo>
-        <VideoList
-          videos={videos}
-          dispatch={dispatch}
-          editVideo={editVideo}
-        ></VideoList>
-      </div>
+      <ThemeContext.Provider>
+        <videosContext.Provider value={videos}>
+          <div className={`App ${themeContext}`}>
+            <AddVideo
+              dispatch={dispatch}
+              editableVideo={editableVideo}
+            ></AddVideo>
+            <VideoList dispatch={dispatch} editVideo={editVideo}></VideoList>
+          </div>
+        </videosContext.Provider>
+      </ThemeContext.Provider>
     </>
   );
 }
