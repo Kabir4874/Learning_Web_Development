@@ -1,23 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AddVideo.css";
 
-function AddVideo({ addVideos }) {
-  const [video, Setvideo] = useState({
+const initialState={
     time: "5 day Ago",
     channel: "Coding Hero",
     verified: true,
-  });
+    title:'',
+    views:'',
+}
+
+function AddVideo({ addVideos,updateVideo , editableVideo}) {
+  const [video, Setvideo] = useState(initialState);
   function handleSubmit(e) {
     e.preventDefault();
-    addVideos(video);
-    console.log(video);
+    if(editableVideo){
+        updateVideo(video)
+    }else{
+
+        addVideos(video);
+    }
+    Setvideo(initialState);
   }
 
   function handleChange(e) {
-    console.log(e.target.name, e.target.value);
     Setvideo({ ...video, [e.target.name]: e.target.value });
-    console.log(video);
   }
+
+  useEffect(()=>{
+    if(editableVideo){
+
+        Setvideo(editableVideo)
+    }
+  },[editableVideo])
+
+
   return (
     <div>
       <form>
@@ -26,14 +42,16 @@ function AddVideo({ addVideos }) {
           name="title"
           onChange={handleChange}
           placeholder="title"
+          value={video.title}
         />
         <input
           type="text"
           name="views"
           onChange={handleChange}
           placeholder="views"
+          value={video.views}
         />
-        <button onClick={handleSubmit}>Add Video</button>
+        <button onClick={handleSubmit}>{editableVideo?'Edit': 'Add'} Video</button>
       </form>
     </div>
   );
