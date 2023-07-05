@@ -2,7 +2,7 @@ import React from "react";
 
 import Video from "./Video";
 import PlayButton from "./PlayButton";
-function VideoList({ videos, deleteVideo, editVideo }) {
+function VideoList({ videos, dispatch, editVideo }) {
   return (
     <div>
       {videos.map((video) => (
@@ -14,8 +14,8 @@ function VideoList({ videos, deleteVideo, editVideo }) {
           time={video.time}
           channel={video.channel}
           verified={video.verified}
-          deleteVideo={deleteVideo}
           editVideo={editVideo}
+          dispatch={dispatch}
         >
           <PlayButton
             onPlay={() => console.log("Play", video.title)}

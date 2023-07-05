@@ -26,31 +26,17 @@ function App() {
 
   const [videos, dispatch] = useReducer(videoReducer, videoDB);
 
-  function addVideos(video) {
-    dispatch({ type: "ADD", payload: video });
-  }
-
-  function deleteVideo(id) {
-    dispatch({ type: "Delete", payload: id });
-  }
   function editVideo(id) {
     SetEditableVideo(videos.find((video) => video.id === id));
   }
-  function updateVideo(video) {
-    dispatch({ type: "Update", payload: video });
-    // setVideos(newVideos);
-  }
+
   return (
     <>
       <div className="App">
-        <AddVideo
-          addVideos={addVideos}
-          editableVideo={editableVideo}
-          updateVideo={updateVideo}
-        ></AddVideo>
+        <AddVideo dispatch={dispatch} editableVideo={editableVideo}></AddVideo>
         <VideoList
           videos={videos}
-          deleteVideo={deleteVideo}
+          dispatch={dispatch}
           editVideo={editVideo}
         ></VideoList>
       </div>
