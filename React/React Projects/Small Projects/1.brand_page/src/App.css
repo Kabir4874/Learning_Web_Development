@@ -5,3 +5,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+:root{
+  --red: #d01c28;
+  --gray: #2e2e2e;
+}
