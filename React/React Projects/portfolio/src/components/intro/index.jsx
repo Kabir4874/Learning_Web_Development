@@ -13,7 +13,7 @@ const Intro = () => {
       <img src={cloudSoft} alt="" className="cloud-soft" />
       <div className="content">
         <Navigation />
-        <IntroContent />
+        {/* <IntroContent /> */}
       </div>
     </div>
   );

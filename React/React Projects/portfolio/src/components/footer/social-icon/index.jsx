@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const SocialIcon = () => {
+const SocialIcon = ({ icon, color, link }) => {
   return (
-    <div>SocialIcon</div>
-  )
-}
+    <div
+      className="social-icon"
+      style={{ backgroundColor: color }}
+      onClick={() => {
+        window.open(link, "_blank");
+      }}
+    >
+      {icon}
+    </div>
+  );
+};
 
-export default SocialIcon
+export default SocialIcon;
