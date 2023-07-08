@@ -1,5 +1,6 @@
 import React from "react";
 import Typed from "react-typed";
+import Button from "./Button";
 
 const Banner = () => {
   return (
@@ -19,6 +20,7 @@ const Banner = () => {
             loop
           />
         </div>
+        <Button classes={"mt-4"} text={"Get Started"}/>
       </div>
     </div>
   );
