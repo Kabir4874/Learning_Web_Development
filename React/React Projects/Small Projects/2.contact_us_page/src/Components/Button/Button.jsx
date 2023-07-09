@@ -1,7 +1,6 @@
 import style from "./Button.module.css";
 
 const Button = ({ text, icon, isOutLine, ...rest }) => {
-  
   return (
     <button
       {...rest}
