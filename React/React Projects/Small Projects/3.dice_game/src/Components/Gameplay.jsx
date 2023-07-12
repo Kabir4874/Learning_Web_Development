@@ -1,14 +1,27 @@
+import { styled } from "styled-components"
 import NumberSelector from "./NumberSelector"
 import TotalScore from "./TotalScore"
 
 
 const Gameplay = () => {
   return (
-    <main>
-       <TotalScore/>
+    <MainContainer>
+      <div className="top_section">
+      <TotalScore/>
        <NumberSelector/>
-    </main>
+      </div>
+    </MainContainer>
   )
 }
 
 export default Gameplay
+
+const MainContainer = styled.div`
+
+.top_section{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+`
