@@ -1,8 +1,13 @@
-import React from 'react'
+import NumberSelector from "./NumberSelector"
+import TotalScore from "./TotalScore"
+
 
 const Gameplay = () => {
   return (
-    <div>Gameplay</div>
+    <main>
+       <TotalScore/>
+       <NumberSelector/>
+    </main>
   )
 }
 
