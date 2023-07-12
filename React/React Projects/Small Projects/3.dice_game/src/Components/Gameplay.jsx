@@ -1,6 +1,7 @@
 import { styled } from "styled-components"
 import NumberSelector from "./NumberSelector"
 import TotalScore from "./TotalScore"
+import Dice from "./Dice"
 
 
 const Gameplay = () => {
@@ -10,6 +11,7 @@ const Gameplay = () => {
       <TotalScore/>
        <NumberSelector/>
       </div>
+      <Dice/>
     </MainContainer>
   )
 }

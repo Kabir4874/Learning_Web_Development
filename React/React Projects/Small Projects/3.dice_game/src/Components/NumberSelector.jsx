@@ -48,4 +48,5 @@ const Box = styled.div`
   font-weight: 700;
   background-color: ${(prop)=> prop.isSelected? "black": "white"};
   color: ${(prop)=> prop.isSelected? "white": "black"};
+  cursor: pointer;
 `;
