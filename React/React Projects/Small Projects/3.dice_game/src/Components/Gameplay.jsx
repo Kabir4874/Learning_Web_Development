@@ -10,47 +10,55 @@ const Gameplay = () => {
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState();
   const [currentDice, setCurrentDice] = useState(1);
-  const [error, setError]= useState("")
+  const [error, setError] = useState("");
+
+  const [showRules, setShowRules] = useState(false);
 
   const generateRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
   };
 
   const roleDice = () => {
-    if(!selected){
-      setError("You have not selected any number")
-      return
+    if (!selected) {
+      setError("You have not selected any number");
+      return;
     }
-   
+
     const randomNumber = generateRandomNumber(1, 7);
 
     setCurrentDice((prev) => randomNumber);
-    if(selected=== randomNumber){
-      setScore((prev)=> prev+randomNumber)
-    }
-    else{
-      setScore((prev)=> prev-2);
+    if (selected === randomNumber) {
+      setScore((prev) => prev + randomNumber);
+    } else {
+      setScore((prev) => prev - 2);
     }
 
-    setSelected(undefined)
+    setSelected(undefined);
   };
 
-  const resetScore= ()=>{
+  const resetScore = () => {
     setScore(0);
-  }
+  };
 
   return (
     <MainContainer>
       <div className="top_section">
-        <TotalScore score={score}/>
-        <NumberSelector setError={setError} error={error} selected={selected} setSelected={setSelected} />
+        <TotalScore score={score} />
+        <NumberSelector
+          setError={setError}
+          error={error}
+          selected={selected}
+          setSelected={setSelected}
+        />
       </div>
       <Dice currentDice={currentDice} roleDice={roleDice} />
       <div className="btns">
         <OutlineButton onClick={resetScore}>Reset</OutlineButton>
-        <Button>Show Rules</Button>
+        <Button onClick={() => setShowRules((prev) => !prev)}>
+          {showRules ? "Hide" : "Show"} Rules
+        </Button>
       </div>
-      <Rules/>
+      {showRules && <Rules />}
     </MainContainer>
   );
 };
@@ -63,7 +71,7 @@ const MainContainer = styled.div`
     align-items: end;
     justify-content: space-between;
   }
-  .btns{
+  .btns {
     display: flex;
     flex-direction: column;
     justify-content: center;
