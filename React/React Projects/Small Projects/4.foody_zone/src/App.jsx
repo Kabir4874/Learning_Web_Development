@@ -80,4 +80,6 @@ background-position: center center;
 
 `
 
-const FoodCard= styled.div``
+const FoodCard= styled.div`
+cadfk 
+`
