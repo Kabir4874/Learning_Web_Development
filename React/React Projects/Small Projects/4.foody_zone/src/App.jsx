@@ -3,7 +3,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import SearchResult from "./Components/SearchResults/SearchResult";
 
-const BASE_URL = "http://localhost:9000/";
+export const BASE_URL = "http://localhost:9000";
 
 function App() {
   const [data, setData] = useState(null);
@@ -48,15 +48,15 @@ function App() {
           <Button>Dinner</Button>
         </FilterContainer>
 
-        <SearchResult />
       </Container>
+        <SearchResult data={data} />
     </>
   );
 }
 
 export default App;
 
-const Container = styled.main`
+export const Container = styled.main`
   max-width: 1200px;
   margin: 0 auto;
 `;
@@ -87,7 +87,7 @@ const FilterContainer = styled.section`
   padding-bottom: 40px;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   background-color: #ff4343;
   border-radius: 5px;
   padding: 6px 12px;
