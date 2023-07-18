@@ -9,6 +9,8 @@ function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [filteredData, setFilteredData] = useState(null);
+  const [selectedBtn, setSelectedBtn] = useState("all");
 
   useEffect(() => {
     const fetchFoodData = async () => {
@@ -18,12 +20,40 @@ function App() {
         const json = await response.json();
         setLoading(false);
         setData(json);
+        setFilteredData(json);
       } catch (error) {
         setError("Unable to fetch data");
       }
     };
     fetchFoodData();
   }, []);
+
+  const searchFood = (e) => {
+    const searchValue = e.target.value;
+    if (searchValue === "") {
+      setFilteredData(null);
+    }
+    const filter = data?.filter((food) =>
+      food.name.toLowerCase().includes(searchValue.toLowerCase())
+    );
+
+    setFilteredData(filter);
+  };
+
+  const filterFood = (type) => {
+    if (type === "all") {
+      setFilteredData(data);
+      setSelectedBtn("all");
+      return;
+    }
+
+    const filter = data?.filter((food) =>
+      food.type.toLowerCase().includes(type.toLowerCase())
+    );
+    setFilteredData(filter);
+    setSelectedBtn(type);
+  };
+
   if (error) {
     return <div>{error}</div>;
   }
@@ -38,18 +68,21 @@ function App() {
             <img src="/images/logo.svg" alt="" />
           </div>
           <div className="search">
-            <input type="text" placeholder="Search Food" />
+            <input
+              onChange={searchFood}
+              type="text"
+              placeholder="Search Food"
+            />
           </div>
         </TopContainer>
         <FilterContainer>
-          <Button>All</Button>
-          <Button>Breakfast</Button>
-          <Button>Lunch</Button>
-          <Button>Dinner</Button>
+          <Button onClick={() => filterFood("all")}>All</Button>
+          <Button onClick={() => filterFood("breakfast")}>Breakfast</Button>
+          <Button onClick={() => filterFood("lunch")}>Lunch</Button>
+          <Button onClick={() => filterFood("dinner")}>Dinner</Button>
         </FilterContainer>
-
       </Container>
-        <SearchResult data={data} />
+      <SearchResult data={filteredData} />
     </>
   );
 }
