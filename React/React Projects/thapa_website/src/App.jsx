@@ -4,8 +4,8 @@ import About from "./About";
 import Services from "./Services";
 import Contact from "./Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 
 function App() {
   return (
