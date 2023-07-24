@@ -7,11 +7,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./GlobalStyle";
 
 function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <BrowserRouter>
           <Header />
           <Routes>

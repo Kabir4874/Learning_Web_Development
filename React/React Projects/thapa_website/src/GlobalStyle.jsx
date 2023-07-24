@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const Globalstyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 
 *{
     margin: 0;
@@ -13,5 +13,34 @@ html{
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-
+h1{
+    font-size: 6rem;
+    font-weight: 900;
+    color: ${({ theme }) => theme.colors.heading};
+}
+h2{
+    font-size: 4.4rem;
+    font-weight: 300;
+    color: ${({ theme }) => theme.colors.heading};
+    white-space: normal;
+    text-align: center;
+}
+h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+p{
+    color: ${({ theme }) => theme.colors.text};
+    opacity: .7;
+    font-size: 1.65rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
 `;
