@@ -1,10 +1,11 @@
-import HeroSection from "./Components/HeroSection"
-
+import HeroSection from "./Components/HeroSection";
 
 const Home = () => {
-  return (
-    <HeroSection/>
-  )
-}
+  const data = {
+    name: "Kabir Ahmed",
+    image: "./images/hero.svg",
+  };
+  return <HeroSection {...data} />;
+};
 
-export default Home
+export default Home;

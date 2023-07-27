@@ -1,18 +1,20 @@
 import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 import { Button } from "../Styles/Button";
+import { useGlobalContext } from "../Context";
 
-const HeroSection = () => {
+const HeroSection = (data) => {
+  const firstName = useGlobalContext();
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
         <div className="section-hero-data">
           <p className="hero-top-data">THIS IS ME</p>
-          <h1 className="hero-heading">KABIR AHMED</h1>
+          <h1 className="hero-heading">{data.name}</h1>
           <p className="hero-para">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-            ducimus at consectetur, temporibus mollitia sit expedita quaerat
-            iusto magnam quia?
+            {firstName} Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Eius ducimus at consectetur, temporibus mollitia sit expedita
+            quaerat iusto magnam quia?
           </p>
           <Button className="btn hireme-btn">
             <NavLink to={"/contact"}>Hire Me</NavLink>
@@ -20,7 +22,7 @@ const HeroSection = () => {
         </div>
         <div className="section-hero-image">
           <picture>
-            <img src="./images/hero.svg" alt="" className="hero-img" />
+            <img src={data.image} alt="" className="hero-img" />
           </picture>
         </div>
       </div>
