@@ -1,15 +1,14 @@
-
-import './App.css'
-import HeroSection from './Components/HeroSection'
+import "./App.css";
+import About from "./Components/About";
+import HeroSection from "./Components/HeroSection";
 
 function App() {
-  
-
   return (
     <>
-     <HeroSection/>
+      <HeroSection />
+      <About />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

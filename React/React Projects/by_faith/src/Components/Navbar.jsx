@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <>
-      <nav className="fixed top-0 bg-transparent w-full px-40 flex items-center justify-between py-3 z-10">
+      <nav className="top-0 bg-transparent w-full px-40 flex items-center justify-between py-3 z-20 fixed">
         <div className="logo">
           <a href="#" className=" text-white text-[20px] font-bold">
             ByFaith
