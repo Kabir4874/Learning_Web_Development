@@ -1,4 +1,5 @@
 import "./App.css";
+import Category from "./Components/Category";
 import Food from "./Components/Food";
 import HeadlineCards from "./Components/HeadlineCards";
 import Hero from "./Components/Hero";
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <HeadlineCards />
       <Food />
+      <Category />
     </>
   );
 }
