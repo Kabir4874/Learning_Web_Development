@@ -2,9 +2,10 @@ import { products } from "../../Products";
 import { ShoppingContext } from "../../Context/ShopContext";
 import { useContext } from "react";
 import CartItem from "./CartItem";
+import "./Cart.css";
 
 const Cart = () => {
-  const { addToCart, cartItems } = useContext(ShoppingContext);
+  const {  cartItems } = useContext(ShoppingContext);
   return (
     <div className="cart">
       <div>
