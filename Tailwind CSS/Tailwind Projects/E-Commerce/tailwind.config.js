@@ -2,25 +2,31 @@
 module.exports = {
   content: ["*"],
   theme: {
-    screens:{
-      sm:'576px',
-      md:'768px',
-      lg:'992px',
-      xl:'1200px',
+    screens: {
+      sm: "576px",
+      md: "768px",
+      lg: "992px",
+      xl: "1200px",
     },
-    container:{
+    container: {
       center: true,
-      padding: '1rem'
+      padding: "1rem",
     },
     extend: {
       fontFamily: {
         poppins: "'Poppins', sans-serif",
         roboto: "'Roboto', sans-serif",
       },
-      colors:{
-        'primary':'#fd3d57',
-        'secondary':'#324324',
+      colors: {
+        primary: "#fd3d57",
+        secondary: "#324324",
       },
+    },
+  },
+  variants: {
+    extend: {
+      display: ["group-hover"],
+      visibility:['group-hover']
     },
   },
   plugins: [],
