@@ -1,0 +1,14 @@
+/* p {
+  position: static;
+} */
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+  border: 1px solid black;
+  position: relative;
+  left: 15px;
+  top: 100px;
+
+}
+

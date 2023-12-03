@@ -1,6 +1,18 @@
 .box {
-  background-color: aqua;
+  /* background-color: aqua; */
   /* transform: translate(0px,100px); */
   /* transform: rotate(-30deg); */
-  transform: scale(1.5);
+  /* transform: scale(1.5); */
+}
+div {
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+  border: 1px solid black;
+}
+.translated {
+  transform: perspective(15px) translateZ(-10px);
+}
+.scaled {
+  transform: perspective(15px) scaleZ(2) rotateX(15deg);
 }
