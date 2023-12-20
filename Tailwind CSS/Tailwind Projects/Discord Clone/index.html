@@ -3,13 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
     <title>Discord | Your Place to Talk and Hang Out</title>
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div id="wrapper">
-        
+    <div id="wrapper" class="overflow-x-hidden w-full h-auto">
+      <!-- !Navbar  -->
+      <div class="bg-deepBlue font-ggSans py-6">
+        <nav
+          class="flex justify-between items-center max-w-[1200px] mx-auto w-full px-4"
+        >
+          <img src="images/logo.svg" alt="" class="cursor-pointer" />
+          <ul class="gap-14 text-white font-semibold lg:flex hidden">
+            <li class="hover:underline transition-all duration-200">
+              <a href="#">Download</a>
+            </li>
+            <li class="hover:underline transition-all duration-200">
+              <a href="#">Nitro</a>
+            </li>
+            <li class="hover:underline transition-all duration-200">
+              <a href="#">Discover</a>
+            </li>
+            <li class="hover:underline transition-all duration-200">
+              <a href="#">Safety</a>
+            </li>
+            <li class="hover:underline transition-all duration-200">
+              <a href="#">Support</a>
+            </li>
+            <li class="hover:underline transition-all duration-200">
+              <a href="#">Blog</a>
+            </li>
+            <li class="hover:underline transition-all duration-200">
+              <a href="#">Careers</a>
+            </li>
+          </ul>
+          <div class="flex items-center gap-3">
+            <button
+              class="bg-white px-4 self-center p-2 text-darkBg rounded-full font-[500] text-[14px] transition-all duration-300 hover:shadow-2xl"
+            >
+              Login
+            </button>
+            <a href="#" class="lg:hidden block"
+              ><i class="bx bx-menu text-4xl text-white"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
+
+      <!-- !Hero Section  -->
+      <header class="w-full relative bg-deepBlue">
+        <img
+          src="images/Image0.svg"
+          alt=""
+          class="absolute w-full scale-x-125 bottom-0"
+        />
+        <img
+          src="images/Image1.svg"
+          alt=""
+          class="absolute bottom-0 -right-28"
+        />
+        <img
+          src="images/Image2.svg"
+          alt=""
+          class="opacity-0 lg:opacity-100 bottom-0 -left-40 absolute"
+        />
+        <div
+          class="h-[555px] max-w-[1200px] mx-auto pt-32 flex flex-col items-center gap-8 xl:max-w-[900px]"
+        >
+          <h1 class="font-ginto text-7xl text-white font-extrabold z-10">
+            IMAGINE A PLACE...
+          </h1>
+          <p
+            class="font-ggSans font-[400] text-white z-10 w-[90%] text-xl text-center"
+          >
+            ...where you can belong to a school club, a gaming group, or a
+            worldwide art community. Where just you and a handful of friends can
+            spend time together. A place that makes it easy to talk every day
+            and hang out more often.
+          </p>
+          <div class="flex gap-4 z-20">
+            <button
+              class="px-8 py-3 bg-white rounded-full flex items-center gap-2 hover:shadow-2xl transition-all duration-500 text-lg cursor-pointer"
+            >
+              <i class="bx bx-download text-2xl"></i>Download For Windows
+            </button>
+            <button
+              class="px-8 py-3 bg-darkBg rounded-full text-white text-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+            >
+              Open Discord in your browser
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- !Feature 1  -->
+      <section class="w-full py-14 max-w-[1200px] mx-auto">
+        <div class="flex items-center gap-12">
+          <img src="images/section1Image.svg" alt="" />
+          <div>
+            <h2
+              class="font-[700] text-[20px] sm:text-[28px] md:text-[48px] font-['ggSans'] leading-[24px] md:leading-[57.6px] mt-5 md:mt-0"
+            >
+              Create an invite-only place where you belong
+            </h2>
+            <p
+              class="font-['ggSans'] text-[16px] sm:text-[20px] font-[400] mt-[24px]"
+            >
+              Discord servers are organized into topic-based channels where you
+              can collaborate, share, and just talk about your day without
+              clogging up a group chat.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- !Feature 2 -->
+      <section class="w-full bg-lightWhite py-[7.5rem] px-[2.6rem]">
+        <div class="max-w-[78rem] w-full mx-auto flex items-center gap-[7rem]">
+          <!-- *Left Side  -->
+          <div class="flex flex-col gap-2">
+            <h2 class="font-[700] text-[20px] sm:text-[28px] md:text-[48px] font-['ggSans'] leading-[24px] md:leading-[57.6px] mt-5 md:mt-0">
+              Where hanging out is easy
+            </h2>
+            <p
+              class="font-['ggSans'] text-[16px] sm:text-[20px] font-[400] mt-[24px]"
+            >
+              Grab a seat in a voice channel when you’re free. Friends in your
+              server can see you’re around and instantly pop in to talk without
+              having to call.
+            </p>
+          </div>
+
+          <img src="images/section2Image.svg" alt="" />
+        </div>
+      </section>
+      <!-- !Feature 3 -->
+      <section class="w-full py-14 max-w-[1200px] mx-auto">
+        <div class="flex items-center gap-12">
+          <img src="images/section3Image.svg" alt="" />
+          <div>
+            <h2
+              class="font-[700] text-[20px] sm:text-[28px] md:text-[48px] font-['ggSans'] leading-[24px] md:leading-[57.6px] mt-5 md:mt-0"
+            >
+            From few to a fandom
+            </h2>
+            <p
+              class="font-['ggSans'] text-[16px] sm:text-[20px] font-[400] mt-[24px]"
+            >
+            Get any community running with moderation tools and custom member access. Give members special powers, set up private channels, and more.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>
