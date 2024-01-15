@@ -71,7 +71,7 @@ nav.scrolled {
   border-radius: 0 0 8px 8px;
   top: 0;
   padding: 0.8rem;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 .logo {
   color: var(--white-color);
