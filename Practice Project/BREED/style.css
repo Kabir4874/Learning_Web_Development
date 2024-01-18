@@ -52,6 +52,15 @@ nav {
   gap: 17.13rem;
   align-items: center;
 }
+nav img {
+  width: 1.5rem;
+}
+nav .icons {
+  display: none;
+}
+.cross {
+  display: none;
+}
 nav .logo {
   color: var(--white-color);
   font-size: 1.25rem;
@@ -338,4 +347,89 @@ section {
 }
 .copyright span {
   color: var(--orange-color);
+}
+@media (max-width: 1200px) {
+  #wrapper {
+    padding: 0 2rem;
+  }
+  .nav-wrapper {
+    padding: 0 2rem;
+  }
+  section {
+    padding: 4rem 0;
+  }
+}
+@media (max-width: 750px) {
+  nav {
+    position: relative;
+  }
+  nav .icons {
+    display: block;
+  }
+  .cross {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    display: none;
+  }
+  .nav-wrapper {
+    padding: 0 1rem;
+  }
+  #wrapper {
+    padding: 0 1rem;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  nav ul {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 105%;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #262626;
+    gap: 2rem;
+    z-index: 1;
+    transition: 0.4s all ease;
+  }
+  .header-container h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .header-container p {
+    font-size: 1rem;
+  }
+  .header-container .buttons {
+    flex-direction: column;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+  .section-heading p {
+    margin-top: 0;
+  }
+  .section-data {
+    gap: 1rem;
+  }
+  .section-data p {
+    margin-bottom: 0.5rem;
+  }
+  .testimonial-heading {
+    margin-bottom: 2rem;
+  }
+  .testimonial-heading p {
+    font-size: 1rem;
+  }
+  nav {
+    gap: 0;
+  }
 }

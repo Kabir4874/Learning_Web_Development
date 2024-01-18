@@ -6,3 +6,22 @@ window.addEventListener("scroll", () => {
     nav.classList.remove("scrolled");
   }
 });
+
+const menu = document.querySelector(".menu");
+const hamburger = document.querySelector(".hamburger");
+const cross = document.querySelector(".cross");
+const li = document.querySelector(".menu").querySelectorAll("li");
+hamburger.addEventListener("click", () => {
+  menu.style.left = "0";
+  cross.style.display = "block";
+});
+
+cross.addEventListener("click", () => {
+  menu.style.left = "105%";
+});
+
+li.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    menu.style.left = "105%";
+  });
+});
