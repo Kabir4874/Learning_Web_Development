@@ -19,7 +19,7 @@
     <div id="wrapper" class="w-[99.68rem] overflow-x-hidden mx-auto">
       <!-- !Navbar  -->
       <nav
-        class="px-32 py-6 border-b border-white95 fixed mt-20 w-[98%] left-[50%] translate-x-[-50%]"
+        class="px-32 py-6 border-b border-white95 fixed mt-20 w-full left-[50%] translate-x-[-50%]"
       >
         <div class="flex justify-between items-center w-full">
           <div class="flex items-center gap-12">
@@ -47,7 +47,7 @@
         </div>
       </nav>
       <!-- !Hero Section  -->
-      <header class="h-[100vh] flex flex-col items-center justify-end">
+      <header class="h-[100vh] flex flex-col items-center justify-end w-full">
         <div
           class="flex items-center bg-white99 border border-white95 rounded-xl py-3 px-7 gap-2 relative"
         >
@@ -82,7 +82,7 @@
           >
         </div>
         <div
-          class="flex mt-[6.25rem] p-[1.88rem] rounded-xl border border-white95 bg-white99 divide-x-2 divide-gray-100"
+          class="flex justify-evenly mt-[6.25rem] p-[1.88rem] rounded-xl border border-white95 bg-white99 divide-x-2 divide-gray-100 w-full"
         >
           <div class="py-7 px-10"><img src="image/zapier.png" alt="" /></div>
           <div class="py-7 px-10"><img src="image/spotify.png" alt="" /></div>
@@ -94,20 +94,37 @@
         </div>
       </header>
       <!-- !Hero CTA  -->
-      <section class="my-24">
+      <section class="my-24 w-[101%]">
         <img src="image/Container.png" alt="" class="cursor-pointer" />
       </section>
       <!-- !Benefits Section  -->
-      <section class="my-24">
+      <section class="my-24 w-full">
         <div>
-          <h2>Benefits</h2>
-          <div>
-            <p>
+          <h2 class="text-gray15 text-5xl font-semibold">Benefits</h2>
+          <div class="flex justify-between items-center mt-2">
+            <p class="max-w-[73.5rem] text-gray35 text-xl">
               Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
               eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac
               cum eget habitasse in velit fringilla feugiat senectus in.
             </p>
-            <a href="#">View All</a>
+            <a
+              href="#"
+              class="py-5 px-6 rounded-lg border border-white95 bg-white99 text-gray15 text-lg font-medium"
+              >View All</a
+            >
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1>01</h1>
+            <h3>Flexible Learning Schedule</h3>
+            <p>
+              Fit your coursework around your existing commitments and
+              obligations.
+            </p>
+            <a href="#">
+              <img src="image/Button.png" alt="" />
+            </a>
           </div>
         </div>
       </section>
