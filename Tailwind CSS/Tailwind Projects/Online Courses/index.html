@@ -20,7 +20,7 @@
     <div id="wrapper" class="max-w-[99.68rem] overflow-x-hidden mx-auto px-16">
       <!-- !Navbar  -->
       <nav
-        class="px-32 py-6 border-b border-white95 fixed mt-20 w-full left-[50%] translate-x-[-50%] z-50"
+        class="px-32 py-3 border-b border-white95 fixed mt-20 w-full left-[50%] translate-x-[-50%] z-50"
         id="navbar"
       >
         <div class="flex justify-between items-center w-full">
@@ -834,33 +834,41 @@
         class="px-20 pt-[6.25rem] pb-[1.88rem] flex justify-between items-start"
       >
         <!-- *Left Part  -->
-        <div>
-          <img src="image/Logo.png" alt="" />
-          <p><img src="image/sms.png" alt="" /> hello@skillbridge.com</p>
-          <p><img src="image/call.png" alt="" /> +91 99131 23 2395</p>
-          <p><img src="image/location.png" alt="" /> Somewhere in the World</p>
+        <div class="">
+          <img src="image/Logo.png" alt="" class="mb-10 cursor-pointer" />
+          <p class="flex gap-2 mb-5 text-gray15 text-lg">
+            <img src="image/sms.png" alt="" /> hello@demo.com
+          </p>
+          <p class="flex gap-2 mb-5 text-gray15 text-lg">
+            <img src="image/call.png" alt="" /> +91 99131 23 2395
+          </p>
+          <p class="flex gap-2 mb-5 text-gray15 text-lg">
+            <img src="image/location.png" alt="" /> Somewhere in the World
+          </p>
         </div>
         <!-- *Right Part  -->
-        <div>
-          <div>
-            <span>Home</span>
+        <div class="flex gap-24 items-start">
+          <div class="flex flex-col items-start gap-4">
+            <span class="text-gray15 text-xl font-semibold">Home</span>
             <p>Benefits</p>
             <p>Our Courses</p>
             <p>Our Testimonials</p>
             <p>Our FAQ</p>
           </div>
-          <div>
-            <span>About Us</span>
+          <div class="flex flex-col items-start gap-4">
+            <span class="text-gray15 text-xl font-semibold">About Us</span>
             <p>Company</p>
             <p>Achievements</p>
             <p>Our Goals</p>
           </div>
-          <div>
-            <span>Social Profiles</span>
-            <div>
-              <img src="image/fb.png" alt="" />
-              <img src="image/twitter.png" alt="" />
-              <img src="image/linkedin.png" alt="" />
+          <div class="flex flex-col items-start gap-4">
+            <span class="text-gray15 text-xl font-semibold"
+              >Social Profiles</span
+            >
+            <div class="flex items-center gap-4">
+              <img class="cursor-pointer" src="image/fb.png" alt="" />
+              <img class="cursor-pointer" src="image/twitter.png" alt="" />
+              <img class="cursor-pointer" src="image/linkedin.png" alt="" />
             </div>
           </div>
         </div>
