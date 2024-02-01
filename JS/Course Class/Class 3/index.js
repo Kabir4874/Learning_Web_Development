@@ -49,6 +49,35 @@
 // const joined = numbers.join(",");
 // console.log(joined);
 
-let message='This is my first message';
-let parts= message.split(' ');
-console.log(parts);
+// let message='This is my first message';
+// let parts= message.split(' ');
+// console.log(parts);
+
+// let numbers = [1, 2, -1, -4];
+
+// let filtered = numbers.filter(function (value) {
+//   return value >= 0;
+// });
+
+// console.log(filtered);
+
+// let numbers = [7, 8, 9, 10];
+
+// let items = numbers.map(function (value) {
+//   return "student_no" + value;
+// });
+// console.log(items);
+
+// !Mapping with objects
+
+let numbers = [1, 2, -6, -7];
+// let filtered = numbers.filter((value) => value >= 0);
+
+// let items = filtered.map(function (num) {
+//   return { value: num };
+// });
+
+let items = numbers
+  .filter((value) => value >= 0)
+  .map((num) => ({ value: num }));
+console.log(items);
