@@ -28,13 +28,42 @@ console.log("Lets Start");
 
 // let rectangleObj= new rectangle();
 
-let rectangle = {
-  side: 2,
-  breadth: 4,
-};
+// let rectangle = {
+//   side: 2,
+//   breadth: 4,
+// };
 
 // !For in loop
 
-for (let key in rectangle) {
-  console.log(key, rectangle[key]);
-}
+// for (let key in rectangle) {
+//   console.log(key, rectangle[key]);
+// }
+
+// !For of loop
+
+// for(let key of Object.keys(rectangle)){
+//     console.log(key);
+// }
+// for(let key of Object.entries(rectangle)){
+//     console.log(key);
+// }
+
+// if('side' in rectangle){
+//     console.log("present");
+// }
+// else{
+//     console.log("Absent");
+// }
+
+// !Copy Object 
+// let rectangle = {
+//   side: 2,
+//   breadth: 4,
+// };
+
+// let obj= Object.assign({},rectangle)
+// console.log(obj);
+
+// let obj2= {...rectangle}
+// console.log(obj2);
+
