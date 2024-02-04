@@ -50,20 +50,65 @@
 // }
 // console.log(abcd());
 
-async function utility() {
-  let mh = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Hello World");
-    }, 10000);
-  });
+// async function utility() {
+//   let mh = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Hello World");
+//     }, 10000);
+//   });
 
-  let ah = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Hello World 2");
-    }, 20000);
-  });
+//   let ah = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Hello World 2");
+//     }, 20000);
+//   });
 
-  let am = await mh;
-  let hm = await ah;
-  return [am, hm];
+//   let am = await mh;
+//   let hm = await ah;
+//   return [am, hm];
+// }
+
+// async function utility() {
+//   let content = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+//   let output=await content.json();
+//   console.log(output);
+// }
+
+// utility();
+
+// async function helper() {
+//   let option = {
+//     method: "POST",
+//     body: JSON.stringify({
+//       title: "foo",
+//       body: "bar",
+//       userId: 1,
+//     }),
+//     headers: {
+//       "Content-type": "application/json; charset=UTF-8",
+//     },
+//   };
+
+//   let content = await fetch(
+//     "https://jsonplaceholder.typicode.com/posts",
+//     option
+//   );
+
+//   let response = await content.json();
+//   return response;
+// }
+
+// async function utility(){
+//   let ans= await helper();
+//   console.log(ans);
+// }
+// utility();
+
+function init() {
+  var name = "mozilla";
+  function displayName() {
+    console.log(name);
+  }
+  displayName();
 }
+init();
