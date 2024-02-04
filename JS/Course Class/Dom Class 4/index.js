@@ -24,23 +24,46 @@
 // });
 // console.log("First");
 
-let wada1 = new Promise(function (resolve, reject) {
-  setTimeout(() => {
-    console.log("setTimeOut1 Started");
-  }, 2000);
-  resolve(true);
-});
+// let wada1 = new Promise(function (resolve, reject) {
+//   setTimeout(() => {
+//     console.log("setTimeOut1 Started");
+//   }, 2000);
+//   resolve(true);
+// });
 
-let output = wada1.then(() => {
-  let wada2 = new Promise(function (resolve, reject) {
+// let output = wada1.then(() => {
+//   let wada2 = new Promise(function (resolve, reject) {
+//     setTimeout(() => {
+//       console.log("setTimeOut2 Started");
+//     }, 3000);
+//     resolve("Wada 2 resolved");
+//   });
+//   return wada2;
+// });
+
+// output.then((value) => {
+//   console.log(value);
+// });
+
+// async function abcd(){
+//   return 7;
+// }
+// console.log(abcd());
+
+async function utility() {
+  let mh = new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("setTimeOut2 Started");
-    }, 3000);
-    resolve("Wada 2 resolved");
+      resolve("Hello World");
+    }, 10000);
   });
-  return wada2;
-});
 
-output.then((value) => {
-  console.log(value);
-});
+  let ah = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Hello World 2");
+    }, 20000);
+  });
+
+  let am = await mh;
+  let hm = await ah;
+  return [am, hm];
+}
