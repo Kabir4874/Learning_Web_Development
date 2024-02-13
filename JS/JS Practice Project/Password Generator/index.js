@@ -21,3 +21,34 @@ const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector(".generateButton");
 
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
+
+let password = "";
+let passwordLength = 10;
+let checkCount = 1;
+
+// !Set Password Length
+function handleSlider() {
+  inputSlider.value = passwordLength;
+  lengthDisplay.innerText = passwordLength;
+}
+handleSlider();
+
+function setIndicator(color) {
+  indicator.style.backgroundColor = color;
+}
+
+function getRandomInt(min, max) {
+  return Math.floor(random() * (max - min)) + min;
+}
+
+function generateRandomNumber() {
+  return getRandomInt(0, 9);
+}
+
+function generateLowerCase() {
+  return String.fromCharCode(getRandomInt(97, 123));
+}
+
+function generateUpperCase() {
+  return String.fromCharCode(getRandomInt(65, 91));
+}
