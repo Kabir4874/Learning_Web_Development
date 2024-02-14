@@ -27,6 +27,7 @@ const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
 let password = "";
 let passwordLength = 10;
 let checkCount = 1;
+setIndicator("#ccc");
 
 // !Set Password Length
 function handleSlider() {
