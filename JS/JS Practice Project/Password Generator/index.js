@@ -40,7 +40,7 @@ function setIndicator(color) {
 }
 
 function getRandomInt(min, max) {
-  return Math.floor(random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
 function generateRandomNumber() {
@@ -108,6 +108,20 @@ copyBtn.addEventListener("click", () => {
   }
 });
 
+function shufflePassword(shufflePass) {
+  for (let i = shufflePass.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = shufflePass[i];
+    shufflePass[i] = shufflePass[j];
+    shufflePass[j] = temp;
+  }
+  let str = "";
+  shufflePass.forEach((el) => {
+    str += el;
+  });
+  return str;
+}
+
 function handleCheckBoxChange() {
   checkCount = 0;
   allCheckBox.forEach((checkbox) => {
@@ -115,10 +129,53 @@ function handleCheckBoxChange() {
       checkCount++;
     }
   });
+
+  if (passwordLength < checkCount) {
+    passwordLength = checkCount;
+    handleSlider();
+  }
 }
 
 allCheckBox.forEach((checkbox) => {
   checkbox.addEventListener("change", handleCheckBoxChange);
 });
 
-generateBtn.addEventListener("click", () => {});
+generateBtn.addEventListener("click", () => {
+  if (checkCount <= 0) return;
+
+  if (passwordLength < checkCount) {
+    passwordLength = checkCount;
+    handleSlider();
+  }
+
+  password = "";
+
+  let funcArr = [];
+  if (uppercaseCheck.checked) {
+    funcArr.push(generateUpperCase);
+  }
+  if (lowercaseCheck.checked) {
+    funcArr.push(generateLowerCase);
+  }
+  if (numbersCheck.checked) {
+    funcArr.push(generateRandomNumber);
+  }
+  if (symbolsCheck.checked) {
+    funcArr.push(generateSymbols);
+  }
+
+  for (let i = 0; i < funcArr.length; i++) {
+    password += funcArr[i]();
+  }
+
+  for (let i = 0; i < passwordLength - funcArr.length; i++) {
+    let randomIndex = getRandomInt(0, funcArr.length);
+    password += funcArr[randomIndex]();
+  }
+
+  password = shufflePassword(Array.from(password));
+
+  passwordDisplay.value = password;
+
+  calcStrength();
+});
