@@ -1,5 +1,8 @@
-import './Item.css'
-function Item() {
-  return <p className='nirma'>Nirma</p>;
-}
-export default Item;
+import React from "react";
+import "./Item.css";
+
+const item = () => {
+  return <div>item</div>;
+};
+
+export default item;
