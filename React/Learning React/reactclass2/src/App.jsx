@@ -1,4 +1,5 @@
 import "./App.css";
+import NewProduct from "./components/NewProduct";
 import Products from "./components/Products";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <>
+      <NewProduct />
       <Products items={products} />
     </>
   );

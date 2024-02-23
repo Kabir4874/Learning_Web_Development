@@ -1,15 +1,15 @@
-import React from 'react'
-import './NewProduct.css';
-import ProductForm from './ProductForm';
+import React from "react";
+import "./NewProduct.css";
+import ProductForm from "./ProductForm";
 
 const NewProduct = () => {
   return (
     <>
-
-        <ProductForm/>
-
+      <div className="new-product">
+        <ProductForm />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default NewProduct
+export default NewProduct;
