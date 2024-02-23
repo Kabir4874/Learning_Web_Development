@@ -1,17 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProductForm.css";
 
 const ProductForm = () => {
+  //   const [title, setTitle] = useState("");
+  //   const [date, setDate] = useState("");
+  //   function titleChangeHandler(event) {
+  //     setTitle(event.target.value);
+  //   }
+  //   function dateChangeHandler(event) {
+  //     setDate(event.target.value);
+  //   }
+  const [fullProductInput, setFullProductInput] = useState({
+    title: "",
+    date: "",
+  });
   return (
     <>
       <form>
         <div className="new-product_title">
           <label>Title</label>
-          <input type="text" />
+          <input type="text" onChange={titleChangeHandler} />
         </div>
         <div className="new-product_date">
           <label>Date</label>
-          <input type="date" min="2023-01-01" max="2023-12-12" />
+          <input
+            type="date"
+            min="2023-01-01"
+            max="2023-12-12"
+            onChange={dateChangeHandler}
+          />
         </div>
         <div className="new-product_button">
           <button type="submit">Add Product</button>
