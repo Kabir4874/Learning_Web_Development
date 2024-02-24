@@ -1,12 +1,16 @@
-import React from "react";
 import "./NewProduct.css";
 import ProductForm from "./ProductForm";
 
-const NewProduct = () => {
+const NewProduct = (props) => {
+  function saveProduct(product) {
+    console.log("I am inside newProduct");
+    console.log(product);
+    props.printProduct(product)
+  }
   return (
     <>
       <div className="new-product">
-        <ProductForm />
+        <ProductForm onSaveProduct={saveProduct} />
       </div>
     </>
   );

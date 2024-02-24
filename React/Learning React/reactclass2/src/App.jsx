@@ -29,10 +29,13 @@ function App() {
       date: new Date(2021, 5, 5),
     },
   ];
-
+  function printProductData(data) {
+    console.log("I am in APP.jsx");
+    console.log(data);
+  }
   return (
     <>
-      <NewProduct />
+      <NewProduct printProduct={printProductData} />
       <Products items={products} />
     </>
   );

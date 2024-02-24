@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ProductForm.css";
 
-const ProductForm = () => {
+const ProductForm = (props) => {
   const [newTitle, setTitle] = useState("");
   const [newDate, setDate] = useState("");
   function titleChangeHandler(event) {
@@ -16,7 +16,9 @@ const ProductForm = () => {
       title: newTitle,
       date: newDate,
     };
-    console.log(productData);
+    // console.log(productData);
+    props.onSaveProduct(productData);
+
     setTitle("");
     setDate("");
   }
