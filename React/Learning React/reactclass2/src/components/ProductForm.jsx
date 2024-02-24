@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./ProductForm.css";
 
 const ProductForm = () => {
@@ -17,13 +17,15 @@ const ProductForm = () => {
       date: newDate,
     };
     console.log(productData);
+    setTitle("");
+    setDate("");
   }
   return (
     <>
       <form onSubmit={submitHandler}>
         <div className="new-product_title">
           <label>Title</label>
-          <input type="text" onChange={titleChangeHandler} />
+          <input type="text" value={newTitle} onChange={titleChangeHandler} />
         </div>
         <div className="new-product_date">
           <label>Date</label>
@@ -32,6 +34,7 @@ const ProductForm = () => {
             min="2023-01-01"
             max="2023-12-12"
             onChange={dateChangeHandler}
+            value={newDate}
           />
         </div>
         <div className="new-product_button">
