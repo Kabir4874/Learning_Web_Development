@@ -2,21 +2,25 @@ import React, { useState } from "react";
 import "./ProductForm.css";
 
 const ProductForm = () => {
-  //   const [title, setTitle] = useState("");
-  //   const [date, setDate] = useState("");
-  //   function titleChangeHandler(event) {
-  //     setTitle(event.target.value);
-  //   }
-  //   function dateChangeHandler(event) {
-  //     setDate(event.target.value);
-  //   }
-  const [fullProductInput, setFullProductInput] = useState({
-    title: "",
-    date: "",
-  });
+  const [newTitle, setTitle] = useState("");
+  const [newDate, setDate] = useState("");
+  function titleChangeHandler(event) {
+    setTitle(event.target.value);
+  }
+  function dateChangeHandler(event) {
+    setDate(event.target.value);
+  }
+  function submitHandler(event) {
+    event.preventDefault();
+    const productData = {
+      title: newTitle,
+      date: newDate,
+    };
+    console.log(productData);
+  }
   return (
     <>
-      <form>
+      <form onSubmit={submitHandler}>
         <div className="new-product_title">
           <label>Title</label>
           <input type="text" onChange={titleChangeHandler} />
