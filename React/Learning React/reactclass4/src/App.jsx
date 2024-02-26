@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const [text, setText] = useState("");
-  const [name,setName]= useState('Kabir');
+  const [name, setName] = useState("Kabir");
   // !Variation 1 -> Every Render
   // useEffect(()=>{
   //   console.log("UI Rendering Done");
@@ -13,9 +13,16 @@ function App() {
   //   console.log("UI Rendering Done");
   // }, []);
   // !Variation 3 -> First Render + Whenever Dependency Changes
+  // useEffect(() => {
+  //   console.log("Change Observed");
+  // }, [name]);
+  // !Variation 4 ->
   useEffect(() => {
-    console.log("Change Observed");
-  }, [name]);
+    console.log("Listener Added");
+    return () => {
+      console.log("Listener Removed");
+    };
+  }, [text]);
 
   function changeHandler(event) {
     console.log(text);
