@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const [text, setText] = useState("");
-  const [name, setName] = useState("Kabir");
+  // const [name, setName] = useState("Kabir");
   // !Variation 1 -> Every Render
   // useEffect(()=>{
   //   console.log("UI Rendering Done");
