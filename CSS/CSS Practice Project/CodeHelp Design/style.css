@@ -26,6 +26,10 @@
 }
 .logo {
   cursor: pointer;
+  width: 8rem;
+}
+.logo img {
+  width: 100%;
 }
 .navItem {
   display: flex;
@@ -111,6 +115,9 @@ section {
   color: rgba(0, 0, 0, 0.5);
   margin-top: 3rem;
 }
+.hero-right img, .hero-left img{
+  border-radius: 1rem;
+}
 hr {
   background-color: var(--btn-hover);
 }
@@ -166,4 +173,7 @@ footer {
 }
 .col4 a i {
   font-size: 1.3rem;
+}
+.col1 img{
+  width: 8rem;
 }
