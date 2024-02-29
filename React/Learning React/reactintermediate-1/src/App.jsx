@@ -22,8 +22,9 @@ function App() {
     email: "",
     comments: "",
     isVisible: true,
+    mode: "",
+    favCar: "",
   });
-  console.log(formData);
 
   function changeHandler(event) {
     const { name, value, checked, type } = event.target;
@@ -35,9 +36,14 @@ function App() {
     });
   }
 
+  function submitHandler(event) {
+    event.preventDefault();
+    console.log("Finally printing the entire form:");
+    console.log(formData);
+  }
   return (
     <div>
-      <form>
+      <form onSubmit={submitHandler}>
         <input
           type="text"
           placeholder="First Name"
@@ -83,6 +89,47 @@ function App() {
           checked={formData.isVisible}
         />
         <label htmlFor="isVisible">Am I Visible?</label>
+        <br />
+        <br />
+        <fieldset>
+          <legend>Mode:</legend>
+          <input
+            type="radio"
+            onChange={changeHandler}
+            name="mode"
+            value="Online-Mode"
+            id="Online-Mode"
+            checked={formData.mode === "Online-Mode"}
+          />
+          <label htmlFor="Online-Mode">Online Mode</label>
+          <br />
+          <br />
+          <input
+            type="radio"
+            onChange={changeHandler}
+            name="mode"
+            value="Offline-Mode"
+            id="Offline-Mode"
+            checked={formData.mode === "Offline-Mode"}
+          />
+          <label htmlFor="Offline-Mode">Offline Mode</label>
+        </fieldset>
+        <label htmlFor="favCar">Tell me your favorite car</label>
+        <select
+          onChange={changeHandler}
+          name="favCar"
+          id="favCar"
+          value={formData.favCar}
+        >
+          <option value="scorpio">Scorpio</option>
+          <option value="fartuner">Fartuner</option>
+          <option value="thar">Thar</option>
+          <option value="legender">Legender</option>
+          <option value="defender">Defender</option>
+        </select>
+        <br />
+        <br />
+        <button>Submit</button>
       </form>
     </div>
   );
