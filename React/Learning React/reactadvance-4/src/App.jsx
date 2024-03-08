@@ -1,13 +1,11 @@
-
+import Counter from "./components/Counter";
 
 function App() {
-
-
   return (
-   <div>
-    Hello
-   </div>
-  )
+    <div>
+      <Counter />
+    </div>
+  );
 }
 
-export default App
+export default App;
