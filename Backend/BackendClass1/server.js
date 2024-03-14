@@ -1,9 +1,11 @@
+const express = require("express");
 
+const app = express();
 
-const express= require('express');
+app.listen(3000, () => {
+  console.log("Server Started at port no. 3000");
+});
 
-const app= express();
-
-app.listen(3000, ()=>{
-    console.log('Server Started at port no. 3000');
-})
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
