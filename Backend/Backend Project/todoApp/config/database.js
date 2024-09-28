@@ -4,12 +4,13 @@ const dbConnect = () => {
   mongoose
     .connect(process.env.DATABASE_URL)
     .then(() => {
-      console.log("DB Connection is Successful");
+      console.log("Database connection is successful");
     })
     .catch((error) => {
-      console.log("Issue in DB Connection");
+      console.log("Error in database connection");
       console.error(error.message);
       process.exit(1);
     });
 };
+
 module.exports = dbConnect;

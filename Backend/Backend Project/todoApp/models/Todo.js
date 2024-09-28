@@ -10,12 +10,12 @@ const todoSchema = new mongoose.Schema({
     required: true,
     maxLength: 50,
   },
-  createdAt: {
+  createAt: {
     type: Date,
     required: true,
     default: Date.now(),
   },
-  updatedAt: {
+  updateAt: {
     type: Date,
     required: true,
     default: Date.now(),

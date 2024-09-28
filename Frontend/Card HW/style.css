@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.88rem;
+}
+.card {
+  width: 26.25rem;
+  padding: 1.56rem 1.88rem;
+  border-radius: 0.625rem;
+  border: 1px solid #d8dde1;
+}
+.card_img {
+  width: 100%;
+}
+.card_content {
+  margin-top: 1.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.88rem;
+}
+.date_comment {
+  display: flex;
+  align-items: center;
+  gap: 1.62rem;
+}
+.date {
+  display: flex;
+  align-items: center;
+  gap: 0.62rem;
+}
+.date_text {
+  color: #696969;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+.border {
+  width: 0.0625rem;
+  height: 0.9375rem;
+  background-color: #d8dde1;
+}
+.comment {
+  display: flex;
+  align-items: center;
+  gap: 0.62rem;
+}
+.card_heading {
+  color: #373a3f;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.125rem;
+}
+.card_description {
+  color: #696969;
+  line-height: 1.625rem;
+  font-family: "DM Sans", sans-serif;
+}
+.btn {
+  display: flex;
+  gap: 0.3125rem;
+  align-items: center;
+  color: #077cea;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 0.02625rem;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
