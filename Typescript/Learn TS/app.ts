@@ -44,5 +44,8 @@
 // }
 // let d1 = new Device("Iphone", 232344324);
 
-// !generics 
+// !generics
 
+function abcd<T>(a: T) {}
+
+abcd<string>("Kabir");

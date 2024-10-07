@@ -32,4 +32,6 @@
 //   }
 // }
 // let d1 = new Device("Iphone", 232344324);
-// !generics 
+// !generics
+function abcd(a) { }
+abcd("Kabir");
